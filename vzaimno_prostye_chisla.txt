@@ -1,0 +1,19 @@
+d=int(input())
+e=int(input())
+
+
+def NOD (a,b):#нахождение нод
+    while a != 0 and b != 0:
+        if a > b:
+            a %= b
+        else:
+            b %= a
+    return a + b
+
+print("NOD=", NOD (d, e))
+
+if (NOD (d, e) == 1):
+    print ("Введенные числа взаимно простые")
+if (NOD (d, e) > 1):
+    print ("Введенные числа НЕ взаимно простые")
+
